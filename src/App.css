@@ -18,6 +18,9 @@
   box-sizing: border-box;
 }
 
+ul {
+  list-style: none;
+}
 #root {
   max-width: 1200px;
   display: flex;
@@ -81,42 +84,3 @@ button {
   width: 80%;
 }
 
-/* Video */
-.videoList {
-  display: flex;
-  width: 100%;
-}
-
-.video {
-  width: 45%;
-  height: 120px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color: yellowgreen;
-  padding: var(--base-space);
-  margin: var(--base-space);
-}
-
-.video-thumbnail {
-  width: 40%;
-}
-
-.video-info {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: calc(var(--base-space) * 2);
-  margin: var(--base-space);
-}
-
-.info-title {
-  font-size: var(--font-size-medium);
-  color: var(--color-black);
-}
-
-.info-userName {
-  font-size: small;
-  color: var(--color-grey-black);
-}
