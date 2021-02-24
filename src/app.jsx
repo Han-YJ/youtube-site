@@ -1,31 +1,33 @@
 import './app.css';
+import React, { useEffect, useState } from 'react';
+import VideoList from './components/video_list/video_list';
 import Navbar from './components/navbar';
-import VideoList from './components/videoList';
 
+function App() {
+	const [videos, setVideos] = useState([]);
 
+	useEffect(() => {
+		const requestOptions = {
+			method: 'GET',
+			redirect: 'follow',
+		};
 
-import React, { Component } from 'react';
-
-class App extends Component {
-  state = {
-    videoList: [
-      {id: 1, thumbnail: '../images/logo.png',title: 'twice', userName: 'jyp'}, 
-      {id: 2, thumbnail: '../images/logo1.png',title: 'twice1', userName: 'jyp'},
-      {id: 3, thumbnail: '../images/logo2.png',title: 'twice2', userName: 'jyp'}
-    ],
-  };
-
-  render() {
-    console.log(this.state.requestOptions);
-    return (
-      <>
-        <Navbar></Navbar>
-        <VideoList
-          videoList = {this.state.videoList}
-        />
-      </>
-    );
-  }
+		fetch(
+			'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResult=25&key=AIzaSyBG89Z8O3205kaUt-BqtyOjxwhHpcWl14M',
+			requestOptions
+		)
+			.then((response) => response.json())
+			.then((result) => setVideos(result.items))
+			.catch((error) => console.log('error', error));
+		console.log('useEffect');
+  }, []);
+  
+	return (
+    <>
+      <Navbar></Navbar>
+      <VideoList videos={videos}/>;
+    </>
+  )
 }
 
 export default App;
