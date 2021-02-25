@@ -21,58 +21,42 @@
 ul {
   list-style: none;
 }
-#root {
-  max-width: 1200px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
+
 button {
   outline: none;
   border: 0;
   cursor: pointer;
 }
 
-.navbar {
+.header {
   display: flex;
-  width: 100%;
-  height: 70px;
+  height: 5rem;
   background-color: var(--color-black);  
   align-items: center;
   color: var(--color-white);
   padding: calc(var(--base-space) * 2);
 }
 
-.navbar-logo {
+.logo {
   display: flex;
   align-items: center;
 }
 
-.logo-img {
-  width: 50px;
-}
-
-.logo-title {
+.title {
   font-size: 27px;
   padding: var(--base-space);
 }
 
-.search-form {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.search-input {
-  width: 100%;
-  height: 40px;
+.input {
+  flex-basis: 100%;
   margin-left: var(--base-space);
   padding: var(--base-space);
-  font-size: var(--font-size-medium);
+  font-size: 1.2rem;
+  outline: 0;
   border-radius: var(--size-border-radius);
 }
 
-.search-btn {
+.button {
   width: 39px;
   height: 39px;
   margin-left: -2px;
@@ -80,7 +64,7 @@ button {
   border-radius: var(--size-border-radius);
 }
 
-.search-btn img {
+.buttonImg {
   width: 80%;
 }
 
