@@ -18,7 +18,8 @@ function App({youtube}) {
     .then(videos => {
       setVideos(videos);
       setSelectedVideo(null);
-    });
+    })
+    .catch(err => console.log(err));
   }, [youtube]);
 
 	useEffect(() => {

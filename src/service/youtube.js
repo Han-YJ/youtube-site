@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 class Youtube {
 	constructor(httpClient) {
     this.youtube = httpClient;
@@ -21,7 +19,7 @@ class Youtube {
 	}
 
 	async search(query) {
-    const response = await this.youtube.get('videos', {
+    const response = await this.youtube.get('search', {
       params: {
         part: 'snippet',
         maxResults: 25,
@@ -29,7 +27,8 @@ class Youtube {
         type: 'video'
       },
     })
-    return response.data.items.map((item) => ({...item, id: item.id.videId}));
+    .catch(err => console.log(err));
+    return response.data.items.map(item => ({ ...item, id: item.id.videoId }));
 	}
 }
 
