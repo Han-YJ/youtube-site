@@ -18,9 +18,14 @@ const SearchHeader = memo(
         handleSearch(); 
       }
     }
+
+    const refeshPage = () => {
+      window.location.reload();
+    }
+
     return (
       <header className={styles.header}>
-        <div className={styles.logo}>
+        <div className={styles.logo} onClick={refeshPage}>
           <img className={styles.img} src="/images/logo.png" alt="video thumbnail"></img>
           <h1 className={styles.title}>Youtube</h1>
         </div>
