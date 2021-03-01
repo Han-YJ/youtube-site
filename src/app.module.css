@@ -1,8 +1,9 @@
-.app {
+/* .app {
   max-width: 80rem;
-}
+} */
 
 .content {
+  padding: 2%;
   display: flex;
 }
 
