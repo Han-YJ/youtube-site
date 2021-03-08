@@ -7,11 +7,17 @@ import SideMenu from './components/side_menu/side_menu';
 
 function App({ youtube }) {
 	const [videos, setVideos] = useState([]);
-	const [selectedVideo, setSelectedVideo] = useState(null);
+  const [selectedVideo, setSelectedVideo] = useState(null);
+  const [sidebar, setSidebar] = useState('show');
 
 	const selectVideo = (video) => {
 		setSelectedVideo(video);
-	};
+  };
+  
+  const toggleSidebar = () => {
+    if(!sidebar) setSidebar(true);
+    else setSidebar(false);
+  }
 
 	const search = useCallback(
 		(query) => {
@@ -47,9 +53,11 @@ function App({ youtube }) {
 
 	return (
 		<div className={styles.app}>
-			<SearchHeader onSearch={search}></SearchHeader>
+			<SearchHeader  onToggle={toggleSidebar} onSearch={search}></SearchHeader>
 			<div className={styles.container}>
-				<SideMenu onCategory={category}></SideMenu>
+        {sidebar &&
+          <SideMenu onCategory={category}></SideMenu>
+        } 
 				<section className={styles.content}>
 					{selectedVideo && (
 						<div className={styles.detail}>

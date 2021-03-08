@@ -2,9 +2,9 @@ import React, { useRef, memo } from 'react';
 import styles from './search_header.module.css';
 
 const SearchHeader = memo(
-  ({onSearch}) => {
+  ({onSearch, onToggle}) => {
     const inputRef = useRef();
-  
+
     const handleSearch = () => {
       const value = inputRef.current.value;
       onSearch(value);
@@ -25,7 +25,7 @@ const SearchHeader = memo(
 
     return (
       <header className={styles.header}>
-        <button className={styles.menuButton}><img className={styles.menuImg} src="./images/sidemenu.png" alt="menu"/></button>
+        <button className={styles.menuButton} onClick={onToggle}><img className={styles.menuImg} src="./images/sidemenu.png" alt="menu"/></button>
         <div className={styles.logo} onClick={refeshPage}>
           <img className={styles.img} src="/images/logo.png" alt="video thumbnail"></img>
           <h1 className={styles.title}>Youtube</h1>
