@@ -25,6 +25,7 @@ const SearchHeader = memo(
 
     return (
       <header className={styles.header}>
+        <button className={styles.menuButton}><img className={styles.menuImg} src="./images/sidemenu.png" alt="menu"/></button>
         <div className={styles.logo} onClick={refeshPage}>
           <img className={styles.img} src="/images/logo.png" alt="video thumbnail"></img>
           <h1 className={styles.title}>Youtube</h1>

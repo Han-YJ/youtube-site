@@ -37,6 +37,16 @@ button {
   padding: calc(var(--base-space) * 2);
 }
 
+.menuButton {
+  width: 40px;
+  margin-right: 1.5rem;
+  background-color: var(--color-black);
+}
+
+.menuImg {
+  width: 100%;
+}
+
 .logo {
   display: flex;
   align-items: center;
