@@ -50,13 +50,22 @@
 }
 
 @media  (max-width: 1024px) {
-  .video {
-    flex-direction: row;
+  .container.grid {
+    width: 50%;
   }
 
   .thumbnail {
     width: 60%;
     margin-right: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container.grid {
+    width: 90%;
+  }
+  .video {
+    flex-direction: row;
   }
 }
 
