@@ -1,6 +1,6 @@
-/* .app {
-  max-width: 80rem;
-} */
+.container {
+  display: flex;
+}
 
 .content {
   padding: 2%;

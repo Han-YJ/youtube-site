@@ -29,6 +29,20 @@ class Youtube {
     })
     .catch(err => console.log(err));
     return response.data.items.map(item => ({ ...item, id: item.id.videoId }));
+  }
+  
+  async category(categoryId) {
+    const response = await this.youtube.get('videos', {
+      params: {
+        part: 'snippet',
+        chart: 'mostPopular',
+        maxResults: 25,
+        videoCategoryId: categoryId,
+        type: 'video'
+      },
+    })
+    .catch(err => console.log(err));
+    return response.data.items;
 	}
 }
 
