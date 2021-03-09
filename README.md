@@ -14,23 +14,22 @@ Youtube API, React, PostCSS를 이용한 Youtube 클론코딩
 - React, React Hooks의 이해를 위한 실전 예제프로젝트
 - Public APIs 사용
 - PostCSS 사용
-<br />
 
 ## Stack
+<table>
+<td>
 <img src="https://img.shields.io/badge/HTML-red?style=flat-square&logo=HTML5&logoColor=white"/>
 <img src="https://img.shields.io/badge/PostCSS-DD3A0A?style=flat-square&logo=PostCSS&logoColor=white"/>
 <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white"/>
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=white"/>
-
-<br />
-
+</td>
+</table>
 ---
 
 ## Feature
 ### Main - Most Popular videos  
 <img src="./public/images/readme/main-sidebar.png" width="750" alt="main" />
 
-<br />
 <br />
 
 ### Video View (video clicked)  
@@ -57,8 +56,10 @@ Youtube API, React, PostCSS를 이용한 Youtube 클론코딩
 - 1024🔺  
 <img src="./public/images/readme/main-sidebar.png" width="500" alt="main" />
 
-- 768 - 1024 , 768🔻  
+- 768 - 1024
 <img src="./public/images/readme/main2.png" width="400" alt="main" style="margin-right: 20px" />
+
+-768🔻  
 <img src="./public/images/readme/main3.png" width="260" alt="main" styel="" />
 
 ---
