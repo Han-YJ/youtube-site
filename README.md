@@ -1,5 +1,6 @@
 # Youtube API를 이용한 Youtube Project
-Youtube API, React, PostCSS를 이용한 Youtube 클론코딩
+Youtube API, React, PostCSS를 이용한 Youtube 클론코딩  
+### [#Youtube clone site](https://60485a2fbed0cf74efebdc39--hyj-youtube-clone.netlify.app/)
 
 ## Contents
 ### [1. Purpose](#Purpose)
@@ -56,7 +57,7 @@ Youtube API, React, PostCSS를 이용한 Youtube 클론코딩
 - 768 - 1024
 <img src="./public/images/readme/main2.png" width="400" alt="main" style="margin-right: 20px" />
 
--768🔻  
+- 768🔻  
 <img src="./public/images/readme/main3.png" width="260" alt="main" styel="" />
 
 ---
